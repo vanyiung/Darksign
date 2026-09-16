@@ -1,6 +1,3 @@
-# DARK RING / 暗环
-
-原创黑暗奇幻 WebGL 交互作品。所有火焰、噪声、圆环及余烬均由程序生成，无游戏贴图、音效、模型或其他游戏素材。
 
 ## 本地运行
 
@@ -25,7 +22,6 @@ $env:Path = $nodeDir.FullName + ';' + $env:Path
 
 若 PowerShell 阻止 npm.ps1，改用 `npm.cmd install`、`npm.cmd run dev`。首次安装需要联网。
 
-在 IntelliJ IDEA 中选择 **File → Open → D:\2\dark ring**，设置 Node.js 解释器后，可以从底部 Terminal 执行上述命令，或在 package.json 的 scripts 旁运行 dev / build。无需 Java、Maven 或 Gradle。
 
 ```powershell
 npm run build
@@ -76,11 +72,3 @@ vite.config.js                     相对静态资源路径
 vite.config.js 已使用 `base: './'`，兼容 `https://用户名.github.io/仓库名/` 子路径以及 Vercel 域名根路径。分支不是 main 时，请修改工作流 branches。私有仓库的 Pages 可用性取决于 GitHub 套餐。
 
 参考：[Vite 部署文档](https://vite.dev/guide/static-deploy)、[Vercel 的 Vite 文档](https://vercel.com/docs/frameworks/frontend/vite)。
-
-画面采用无标题的纯黑全屏布局，圆周火光带有不均匀暗红火舌，六点钟方向的光柱延伸到画面下缘。所有效果仍由原创 GLSL 程序生成。
-
-圆周采用横向杏仁形的柔和体积泛光，低频 FBM 使光雾缓慢变化。没有向内吸入的火舌或旋涡；少量余烬在圆外漂浮。保留左下缘高光和底部光柱。
-
-
-当前画面固定使用最高预设（完整 240 粒子，最高 2 倍设备像素比），已移除画质和暂停按钮。系统开启减少动态效果时仅降低动画速度。球体具有微弱反射光，粒子沿三维轨道绕行并按球面遮挡。
-
